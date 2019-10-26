@@ -1,14 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-import './index.css';
+import "./index.css";
 
-// TODO: Create a simple React Component named 'Square' and add class named 'square' to it.
-
+// TODO: Change component so when clicked it updates its state and draws an 'X'
+class Square extends React.Component {
+  render() {
+    return <button className="square">{/* TODO */}</button>;
+  }
+}
 
 // ========================================
 
-ReactDOM.render(
-    null, // HINT: You should render your 'Square' component here
-    document.getElementById('root')
-);
+ReactDOM.render(<Square />, document.getElementById("root"));
