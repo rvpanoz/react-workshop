@@ -47,12 +47,14 @@ class Board extends React.Component {
 }
 
 // TODO: Use lifecycle method componentDidMount to load state from localstorage
-// TODO: Use lifecycle method componentDidUpdate to check if a winner exists and update localstorage
+// TODO: Use lifecycle method componentDidUpdate to check if a winner exists
+// TODO: If a winner exists clear localstorage
 class Game extends React.Component {
   constructor(props) {
     super(props)
 
     this.state = {
+      winner: '',
       player1: '',
       player2: '',
       squares: Array(9).fill(null),
@@ -82,6 +84,8 @@ class Game extends React.Component {
       player1,
       player2
     });
+
+    localStorage.setItem('ticTacToe', JSON.stringify(this.state))
   }
 
   componentDidMount() {
