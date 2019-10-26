@@ -95,8 +95,42 @@ ul {
 .game {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .game-info {
   margin-left: 20px;
+}
+
+.wrapper {
+  width: 400px;
+  padding: 0;
+  border-radius: 3px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5em;
+}
+
+.form-row > label {
+  padding: 5px 10px 5px 0;
+  flex: 1;
+}
+
+.form-row > input {
+  flex: 2;
+}
+
+.form-row > input,
+.form-row > button {
+  padding: 7.5px;
+}
+
+.form-row > button {
+  background: gray;
+  color: white;
+  border: 0;
+  cursor: pointer;
 }
