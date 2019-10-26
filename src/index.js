@@ -53,6 +53,8 @@ class Game extends React.Component {
     super(props)
 
     this.state = {
+      player1: '',
+      player2: '',
       squares: Array(9).fill(null),
       xIsNext: true
     };
